@@ -1,0 +1,190 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+@font-face {
+  font-family: ArmWrestler;
+  src: url(../fonts/ArmWrestler-webfont.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body{
+  background-image: url("../images/pattern.jpg");
+}
+img {
+  max-width: 100%;
+}
+
+header h1{
+  width:45%;
+  margin:10px auto 20px auto;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: ArmWrestler;
+  font-size: 45px;
+  border: solid 1px black;
+  border-radius: 15px;
+
+
+}
+
+.player,.enemy{
+  width:100%;
+  height:400px;
+  background-color: white;
+  border-radius: 15px;
+  padding-top:80px;
+  margin-bottom: 5px;
+  position: relative;
+  img{
+  max-width: 65%;
+  position: relative;
+  z-index: 2;
+  }
+    button{
+      font-weight: bold;
+
+    }
+
+}
+.player img:nth-child(2){
+  display: none;
+};
+.show{
+  display: block;
+}
+.hide{
+  display:none;
+}
+.overlay-winner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(62, 255, 221, 0.8);
+  z-index: 3;
+  border-radius: 15px;
+}
+.overlay-loser::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(204, 29, 37, 0.8);
+  z-index: 3;
+  border-radius: 15px;
+}
+
+#ninja{
+  display: none;
+  position: absolute;
+  top:140px;
+}
+#pirate{
+  display:none;
+  position: absolute;
+  bottom:30px;
+  left:90px;
+}
+#viking{
+  display:none;
+  position: absolute;
+  bottom:30px;
+  left:90px;
+}
+
+.enemy-health,.char-health{
+  width:80%;
+  height:30px;
+  margin: auto;
+  vertical-align: bottom;
+  border-radius: 10px;
+  border:solid 1px #638599;
+  overflow: hidden;
+    h5{
+      color:white;
+      background-color: white;
+      font-family: ArmWrestler;
+      text-align: center;
+      margin-top: 0px;
+      text-transform: uppercase;
+      height: 20px;
+      width: 100%;
+      float:left;
+      display:block;
+    }
+    div{
+      background-color: #CC1D25;
+      height: 50px;
+      padding-top: 5px;
+
+    }
+}
+.oval{
+  width: 90%;
+  height: 80px;
+  background: rgba(25,139,204,1);
+  border-radius: 80%;
+  -webkit-transform: rotateX(70deg);
+  transform: rotateX(70deg);
+  margin: 0 auto;
+  box-shadow: 0px 5px 15px 5px;
+  position: absolute;
+  top: 310px;
+  left: 20px;
+  z-index: 1;
+}
+h1{
+  margin: 0px;
+  text-align:center;
+  font-family: ArmWrestler;
+}
+.char_select{
+  margin-left:30%;
+  margin-top: 40px;
+}
+.attackButton{
+  font-family: ArmWrestler;
+  width:200px;
+  height:30px;
+  margin: 12px auto;
+  display:block;
+}
+
+@keyframes left-attack{
+    0%   {left:90px;}
+    100% {left:290px;}
+}
+@keyframes right-attack{
+    0%   {left:90px;}
+    100% {left:-50px;}
+}
+
+.charattack{
+  animation-name:left-attack;
+  animation-duration:0.3s;
+}
+.enemyattack{
+  animation-name:right-attack;
+  animation-duration:0.3s;
+}
+@media (min-width:1200px) {
+  #ninja{
+    display: none;
+    position: absolute;
+    top:100px;
+  }
+
+}
