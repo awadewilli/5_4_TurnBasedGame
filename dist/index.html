@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>5_4_TurnBasedGame</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <header>
+      <h1> Pirate,Ninja,Viking </h1>
+    </header>
+      <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+            <div class="player">
+              <img id="ninja" src="images/Ninja.png">
+              <img id="pirate" src="images/Pirate_still.png">
+              <img id="viking" src="images/Viking_still.png">
+              <h1>Choose Your <br>Character</h1>
+                <div class="char_select">
+                  <button type="button" class="btn btn-primary selectButton" value="0">Viking</button>
+                  <button type="button" class="btn btn-primary selectButton" value="1">Pirate</button>
+                  <button type="button" class="btn btn-primary selectButton" value="2">Ninja</button>
+                </div>
+              <div class="oval">
+              </div>
+
+            </div>
+
+              <div class="char-health">
+                  <h5><div>health</div></h5>
+              </div>
+        </div>
+        <div class="col-md-6">
+          <div class="enemy">
+            <div class="oval">
+            </div>
+          </div>
+            <div class="enemy-health">
+                  <h5><div>health</div></h5>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="controls">
+            <button type="button" class="btn btn-danger attackButton">FIGHT</button>
+          </div>
+        </div>
+
+      </div>
+      <script src="js/simpleGame_1_0.js" type="text/javascript">
+    </script>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
